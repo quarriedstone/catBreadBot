@@ -5,7 +5,7 @@ COPY bot /bot/bot
 COPY main.py /bot
 COPY requirements.txt /bot
 
-ENV BOT_TOKEN = 982112851:AAHfZlRWnSsCdm58-uUfnjS9HtlMbO72l_M
+ENV BOT_TOKEN = 1234
 
 RUN pip install -r requirements.txt
 
