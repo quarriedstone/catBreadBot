@@ -67,7 +67,8 @@ class CatBreadBot:
                 self.QUESTION2: [MessageHandler(Filters.text, self.question_ears)]
             },
 
-            fallbacks=[]
+            fallbacks=[],
+            allow_reentry=True
         )
         self.dispatcher.add_handler(conv_handler)
         self.dispatcher.add_error_handler(self.error)
