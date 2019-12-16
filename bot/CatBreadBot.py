@@ -58,9 +58,9 @@ class CatBreadBot:
         cat_score, bread_score = self.classify_image(filename)
 
         if bread_score > cat_score:
-            update.message.reply_text("C %.2f вероятностью это хлеб! Ешь его!" % bread_score*100)
+            update.message.reply_text("C %.2f вероятностью это хлеб! Ешь его!" % (bread_score*100))
         else:
-            update.message.reply_text("С %.2f вероятностью это кот! Не ешь его!" % cat_score*100)
+            update.message.reply_text("С %.2f вероятностью это кот! Не ешь его!" % (cat_score*100))
 
         os.remove(filename)
 
