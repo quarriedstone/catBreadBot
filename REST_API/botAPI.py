@@ -25,7 +25,7 @@ async def make_client(user_id, phone, code=None, hashval=None):
 async def send_message_util(user_id, message):
     client = TelegramClient(user_id, api_id, api_hash)
     await client.connect()
-    await client.send_message("@Osmiyg", message)
+    await client.send_message("@CatBreadBot", message)
     await client.disconnect()
     return True
 
@@ -33,7 +33,7 @@ async def send_message_util(user_id, message):
 async def get_message_util(user_id, limit=1):
     client = TelegramClient(user_id, api_id, api_hash)
     await client.connect()
-    entity = await client.get_entity("@Osmiyg")
+    entity = await client.get_entity("@CatBreadBot")
     messages = await client.get_messages(entity, limit=limit)
     json_list = []
     for i in range(limit):
