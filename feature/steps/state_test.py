@@ -8,7 +8,7 @@ def step_impl(context):
     context.bot = Mock()
     context.update = Mock()
     context.dispatcher = Mock()
-    context.test_bot = CatBreadBot(dispatcher=context.dispatcher)
+    context.test_bot = CatBreadBot(dispatcher=context.dispatcher, bot=context.bot)
 
 
 @when('user sends /start')
@@ -27,7 +27,7 @@ def step_impl(context):
     context.update = Mock()
     context.dispatcher = Mock()
     context.update.message.from_user = type('TelegramUser', (object,), {'first_name': 'test_user'})
-    context.test_bot = CatBreadBot(dispatcher=context.dispatcher)
+    context.test_bot = CatBreadBot(dispatcher=context.dispatcher, bot=context.bot)
 
 
 @when('user sends "{message}" for first question')
@@ -42,7 +42,7 @@ def step_impl(context):
     context.update = Mock()
     context.dispatcher = Mock()
     context.update.message.from_user = type('TelegramUser', (object,), {'first_name': 'test_user'})
-    context.test_bot = CatBreadBot(dispatcher=context.dispatcher)
+    context.test_bot = CatBreadBot(dispatcher=context.dispatcher, bot=context.bot)
 
 
 @when('user sends "{message}" for second question')

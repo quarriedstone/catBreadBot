@@ -7,7 +7,7 @@ def main():
 
     dp = updater.dispatcher
     # Added conversation for QUESTION1 and QUESTION2
-    cat_bread_bot = CatBreadBot(dp)
+    cat_bread_bot = CatBreadBot(dp, updater.bot)
     updater.start_polling()
     updater.idle()
 
